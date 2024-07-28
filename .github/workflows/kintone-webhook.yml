@@ -1,0 +1,17 @@
+name: Kintone Webhook Trigger
+
+on:
+  workflow_dispatch:
+    inputs:
+      record_id:
+        description: 'Record ID'
+        required: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Process Kintone Record
+        run: echo "Processing record ID: ${{ github.event.inputs.record_id }}"

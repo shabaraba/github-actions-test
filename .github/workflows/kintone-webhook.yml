@@ -14,4 +14,4 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Process Kintone Record
-        run: echo "Processing record ID: ${{ github.event.inputs.record_id }}"
+        run: echo "Processing record ID → ${{ github.event.inputs.record_id }}"
